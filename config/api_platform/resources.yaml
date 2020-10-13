@@ -1,0 +1,20 @@
+resources:
+    App\Entity\User:
+        iri: http://schema.org/Person
+        attributes:
+            input: false
+            output: App\DTO\UserDTO
+        collectionOperations:
+            get:
+                path: /users
+                swagger_context:
+                    summary: Get Users
+                    tags:
+                        - User
+        itemOperations:
+            get:
+                path: /users/{id}
+                swagger_context:
+                    summary: Get user by id
+                    tags:
+                        - User

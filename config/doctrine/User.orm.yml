@@ -1,0 +1,17 @@
+App\Entity\User:
+    type: entity
+    id:
+        id:
+            type: string
+            generator:
+                strategy: NONE
+    fields:
+        username:
+            type: string
+            nullable: false
+        email:
+            type: string
+            nullable: false
+        createdDate:
+            type: datetime
+            nullable: false
